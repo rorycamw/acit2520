@@ -11,7 +11,7 @@ app.use(express.static(__dirname + '/public'));
 app.get('/', (request, response) => {
 	// response.send('<h1>Hello Express!</h1>');
 	response.send({
-		name: 'Your Name',
+		name: 'Rory',
 		school: [
 			'BCIT',
 			'SFU',
