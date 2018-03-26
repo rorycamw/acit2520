@@ -2,6 +2,8 @@ const express = require('express');
 const fs = require('fs');
 const hbs = require('hbs');
 
+const port = process.env.PORT || 8080;
+
 var app = express();
 
 app.use(express.static(__dirname + '/public'));
@@ -48,6 +50,6 @@ app.get('/404', (request, response) => {
 	})
 })
 
-app.listen(8080, () => {
-	console.log('Server is up on the port 8080');
+app.listen(port, () => {
+	console.log('Server is up on the port ${port}');
 });
